@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Word Counter</title>
+		<link rel="stylesheet" href="../CSS/style.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Word Counter</h1>
+		</header>
+
+		<div class="flex">
+			<textarea name="wordInput" id="wordInput"></textarea>
+
+			<section id="counterCard">
+				<div class="counter" id="wordCounter">
+					<h3 id="wordCounterText">0</h3>
+					<h2>Words</h2>
+				</div>
+
+				<div class="counter" id="charCounter">
+					<h3 id="charCounterText">0</h3>
+					<h2>Characters</h2>
+				</div>
+
+				<div id="checkBox">
+					<input type="checkbox" id="inTextCitationIgnore" />
+					<label for="inTextCitationIgnore"
+						>Ignore In-text Citations</label
+					>
+				</div>
+			</section>
+		</div>
+
+        <script src="../JS/script.js"></script>
+	</body>
+</html>
