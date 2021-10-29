@@ -25,17 +25,13 @@ function count() {
 function ignoreCiteState(str) {
 	console.log(cbState)
 	cbState = cb.checked
-	
+
 	if (cbState) {
 		wordInputText = str.replace(/ *\([^)]*\) */g, "")
-	} else (
-		wordInputText = wordInput.value
-	)
+	} else wordInputText = wordInput.value
 
 	return wordInputText
 }
-
-
 
 function countWords(str) {
 	let wordNum = str.split(" ").length
@@ -49,3 +45,5 @@ function countChar(str) {
 
 	charCounter.innerHTML = `${charNum}`
 }
+
+
