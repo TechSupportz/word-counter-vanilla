@@ -1,51 +1,130 @@
 *,
 *::before,
 *::after {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
 }
 
-header{
-    background-color: hsl(204, 75%, 70%);
-    padding: 1rem;
-
-    text-align: center;
+html,
+body {
+	height: 100%;
+	width: 100%;
 }
 
-.flex{
-  display: flex;
-  margin-top: 5rem;
-  margin-left: 2rem;
+header {
+	display: flex;
+
+	background-color: hsl(204, 75%, 70%);
+	height: 10%;
+	padding: 10px;
+
+	align-items: center;
+	justify-content: center;
 }
 
+.flex {
+	display: grid;
+	grid-template-areas: "input output";
 
-#wordInput{
-    resize: none;
-    height: 37rem;
-    width: 60rem;
-    padding: 1rem;
+    justify-content: center;
 
-    font-family: Arial, Helvetica, sans-serif;
+	grid-template-columns: 75% 300px;
+
+	height: 75%;
+	margin: 3rem;
 }
 
-#counterCard{
-    background-color: hsl(204, 70%, 75%);
-    padding: 1rem;
-    margin-left: 4rem;
+#wordInput {
+	grid-area: input;
+
+	resize: none;
+	width: auto;
+	padding: 20px;
+
+	font-family: Arial, Helvetica, sans-serif;
 }
 
-.counter{
-    margin-bottom: 1.5rem;
+#counterCard {
+    display: flex;
+
+    flex-direction: column;
+    gap: 25px;
+
+	background-color: hsl(204, 70%, 75%);
+	padding: 25px;
+	margin-left: 30px;
+    
+	
 }
 
-.counter h3{
-    font-size: 3em;
+.counter h3 {
+	font-size: 3em;
+	grid-area: number;
 }
 
-.counter h2{
-    font-size: 2em;
+.counter h2 {
+	font-size: 2em;
+	grid-area: txt;
 }
 
+.checkBox{
+    grid-area: checkBox;
+}
 
+@media screen and (max-width: 1000px) {
+	.flex {
+		grid-template-areas:
+			"output"
+			"input";
+
+		margin: 2rem;
+
+		grid-template-columns: 100%;
+		grid-template-rows: 25% 75%;
+	}  
+
+	.counter h2 {
+        margin: 0;
+
+        width: 10px;
+    }
+
+    #charCounter h3{
+        grid-area: charCount;
+    }
+
+    #wordCounter h3{
+        grid-area: wordCount;
+    }
+
+    #wordCounter h2{
+        grid-area: wordCountTxt;
+    }
+
+    #charCounter h2{
+        grid-area: charCountTxt;
+    }
+
+    .checkBox{
+        margin-top: 20px;
+    }
+
+    #counterCard {
+		display: grid;
+		grid-template-areas: 
+        "wordCount charCount"
+        "wordCountTxt charCountTxt"
+        "checkBox checkBox";
+
+        grid-template-columns: 40% 40%;
+        height: fit-content;
+        gap: 0;
+        margin-left: 0;  
+	}
+
+    #wordInput {
+       margin-top: 75px;
+    }
+}
