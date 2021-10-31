@@ -23,7 +23,7 @@ function count() {
 }
 
 function ignoreCiteState(str) {
-	console.log(cbState)
+	//console.log(cbState)
 	cbState = cb.checked
 
 	if (cbState) {
@@ -34,8 +34,13 @@ function ignoreCiteState(str) {
 }
 
 function countWords(str) {
-	let wordNum = str.split(" ").length
-	console.log(str.split(" "))
+	str = str.replace(/\n/g, ' ')
+	let wordsArray = str.split(" ")
+	wordsArrayFilter = wordsArray.filter((i) => i !== "")
+	
+	let wordNum = wordsArrayFilter.length
+	console.log(wordsArrayFilter)
+	console.log(wordNum)
 
 	wordCounter.innerHTML = `${wordNum}`
 }
@@ -45,5 +50,3 @@ function countChar(str) {
 
 	charCounter.innerHTML = `${charNum}`
 }
-
-
