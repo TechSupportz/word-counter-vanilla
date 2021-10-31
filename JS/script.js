@@ -16,7 +16,7 @@ cb.addEventListener("change", () => {
 
 function count() {
 	wordInputText = wordInput.value
-
+	console.log(wordInputText)
 	ignoreCiteState(wordInputText)
 	countWords(wordInputText)
 	countChar(wordInputText)
@@ -34,19 +34,22 @@ function ignoreCiteState(str) {
 }
 
 function countWords(str) {
-	str = str.replace(/\n/g, ' ')
-	let wordsArray = str.split(" ")
-	wordsArrayFilter = wordsArray.filter((i) => i !== "")
-	
-	let wordNum = wordsArrayFilter.length
-	console.log(wordsArrayFilter)
+	let wordsArray = str.replace(/\n/g, " ").split(" ").filter((i) => i !== "")
+	let wordNum = wordsArray.length
+
+	console.log(wordsArray)
 	console.log(wordNum)
 
 	wordCounter.innerHTML = `${wordNum}`
 }
 
 function countChar(str) {
-	let charNum = str.split("").length
+	let charArray = str.replace(/\n/g, "").split("").filter((i) => i !== "")
+	let charNum = str.replace(/\n/g, "").split("").filter((i) => i !== "").length
+
+	console.log(charArray)
+	console.log(charNum)
 
 	charCounter.innerHTML = `${charNum}`
+
 }
