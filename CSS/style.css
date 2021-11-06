@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
 *,
 *::before,
@@ -6,7 +6,7 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans", sans-serif;
 }
 
 html,
@@ -18,7 +18,7 @@ body {
 header {
 	display: flex;
 
-	background-color: hsl(204, 75%, 70%);
+	background-color: hsl(204, 100%, 83%);
 	height: 10%;
 	padding: 10px;
 
@@ -45,6 +45,8 @@ header {
 	width: auto;
 	padding: 20px;
 
+	border-radius: 8px;
+
 	font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -54,10 +56,13 @@ header {
 	flex-direction: column;
 	gap: 25px;
 
-	background-color: hsl(204, 70%, 75%);
+	background-color: hsla(204, 91%, 83%, 0.637);
 	padding: 25px;
 	margin-left: 30px;
+
+	border-radius: 8px;
 }
+
 
 .counter h3 {
 	font-size: 3em;
@@ -127,8 +132,23 @@ header {
 
 	#wordInput {
 		margin-top: 75px;
-		
 	}
 }
 
+@media screen and (max-width: 400px) {
+	.counter h3 {
+		font-size: 2.25em;
+	}
 
+	.counter h2 {
+		font-size: 1.5em;
+	}
+
+	.checkBox label {
+		font-size: 0.85em;
+	}
+
+	#wordInput {
+		margin-top: 45px;
+	}
+}

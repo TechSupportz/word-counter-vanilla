@@ -51,5 +51,4 @@ function countChar(str) {
 	console.log(charNum)
 
 	charCounter.innerHTML = `${charNum}`
-
 }
