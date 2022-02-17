@@ -6,5 +6,4 @@ A word counter with a ignore in-text citation toggle because I was annoyed of re
 * CSS
 * JS
 
-### Hosted on (as of 07/02/2022)
-https://www.tnitish.com/HTML/index.html
+### [This has been deprecated and replaced with word-counter-tsx](https://github.com/TechSupportz/word-counter-tsx)
